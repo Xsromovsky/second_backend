@@ -1,13 +1,14 @@
 import express, { Request, Response, NextFunction } from "express"
 import dotenv from 'dotenv'
-import phoneRoutes from './routes/phoneRoutes'
+
+import productRoutes from './routes/productRoutes'
 
 dotenv.config();
 
 const app = express();
 app.use(express.json());
 
-app.use('/api/phone', phoneRoutes);
+app.use('/api', productRoutes);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {

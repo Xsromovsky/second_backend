@@ -1,10 +1,10 @@
-export interface Phone{
+export interface Product{
     id: string;
     type: string;
     brand: string;
-    color: string;
-    rom: string;
-    ram: string;
+    name: string;
+    
     price: number;
     quantity: number;
+    details: any;
 }
